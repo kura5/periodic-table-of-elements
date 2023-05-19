@@ -20,6 +20,13 @@
   --color-noble-gas: #ffe0f2;
 }
 
+header {
+  display: flex;
+}
+header h1 {
+ margin: 0 3em 0 0;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -33,7 +40,7 @@ table.metal_legend,
 table.metal_legend2 {
   border-spacing: 3px;
   box-sizing: border-box;
-  margin-bottom: .5em;
+  margin: .2em 3em .1em 0;
 }
 table.metal_legend td,
 table.metal_legend2 td {
@@ -206,7 +213,36 @@ modules.addClickListener();
 
 <body>
 
-<h1>元素周期表</h1>
+  <header>
+    <h1>元素周期表</h1>
+
+    <div class="overflow-auto">
+      <table class="metal_legend">
+      	<tbody>
+      	<tr>
+      	  <td class="not_metal">非金属</td>
+      	  <td class="metal">金属</td>
+      	  <td class="not_clue_metal">不明</td>
+      	</tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="overflow-auto">
+      <table class="metal_legend2">
+      	<tbody>
+      	<tr>
+      	  <td class="alkali_metal">アルカリ金属</td>
+      	  <td class="alkali_earth">アルカリ土類金属</td>
+      	  <td class="halogen">ハロゲン</td>
+      	  <td class="noble_gas">希ガス</td>
+      	</tr>
+      	</tbody>
+      </table>
+    </div>
+
+  </header>
+
 
 <div class="overflow-auto">
 <table id="periodic_table_main" class="periodic_table">
@@ -417,31 +453,6 @@ modules.addClickListener();
 		  <td><span>103</span><span>Lr</span><span>ローレンシウム</span><span>[262]</span></td>
 	  </tr>
   </tbody>
-</table>
-</div>
-
-<div class="overflow-auto">
-<table class="metal_legend">
-	<tbody>
-	<tr>
-	  <td class="not_metal">非金属</td>
-	  <td class="metal">金属</td>
-	  <td class="not_clue_metal">不明</td>
-	</tr>
-  </tbody>
-</table>
-</div>
-
-<div class="overflow-auto">
-<table class="metal_legend2">
-	<tbody>
-	<tr>
-	  <td class="alkali_metal">アルカリ金属</td>
-	  <td class="alkali_earth">アルカリ土類金属</td>
-	  <td class="halogen">ハロゲン</td>
-	  <td class="noble_gas">希ガス</td>
-	</tr>
-	</tbody>
 </table>
 </div>
 
