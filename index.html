@@ -198,6 +198,10 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
   border: 2px solid var(--color-orange);
 }
 </style>
+<script type="module">
+import modules from "./js/main.js";
+modules.addClickListener();
+</script>
 </head>
 
 <body>
@@ -205,7 +209,7 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
 <h1>元素周期表</h1>
 
 <div class="overflow-auto">
-<table class="periodic_table">
+<table id="periodic_table_main" class="periodic_table">
 	<thead>
     <tr>
 		  <td></td>
@@ -331,7 +335,7 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
 		<td>第6周期</td>
 		<td class="alkali_metal"><span>55</span><span>Cs</span><span>セシウム</span><span>132.9</span></td>
 		<td class="alkali_earth"><span>56</span><span class="emp">Ba</span><span>バリウム</span><span>137.3</span></td>
-		<td class="border1"><span>57～71</span><span></span><span class="type1">ランタノイド</span></td>
+    <td class="border1"><span>57～71</span><span></span><span class="type1">ランタノイド</span><span></span></td>
 		<td class="metal"><span>72</span><span>Hf</span><span>ハフニウム</span><span>178.5</span></td>
 		<td class="metal"><span>73</span><span>Ta</span><span>タンタル</span><span>180.9</span></td>
 		<td class="metal"><span>74</span><span>W</span><span>タングステン</span><span>183.8</span></td>
@@ -352,7 +356,7 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
 		<td>第7周期</td>
 		<td class="alkali_metal"><span>87</span><span>Fr</span><span>フランシウム</span><span>[223]</span></td>
 		<td class="alkali_earth"><span>88</span><span>Ra</span><span>ラジウム</span><span>[226]</span></td>
-		<td class="border1"><span>89～103</span><span></span><span class="type1">アクチノイド</span></td>
+    <td class="border1"><span>89～103</span><span></span><span class="type1">アクチノイド</span><span></span></td>
 		<td class="not_clue_metal"><span>104</span><span>Rf</span><span>ラザフォージウム</span><span>[267]</span></td>
 		<td class="not_clue_metal"><span>105</span><span>Db</span><span>ドブニウム</span><span>[268]</span></td>
 		<td class="not_clue_metal"><span>106</span><span>Sg</span><span>シーボーギウム</span><span>[271]</span></td>
@@ -374,7 +378,7 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
 </div>
 
 <div class="overflow-auto">
-<table class="periodic_table2">
+<table id="periodic_table_sub" class="periodic_table2">
 	<tbody>
     <tr>
 		  <td class="border1">ランタノイド</td>
