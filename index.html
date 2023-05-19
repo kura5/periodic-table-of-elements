@@ -20,11 +20,8 @@
   --color-noble-gas: #ffe0f2;
 }
 
-header {
-  display: flex;
-}
-header h1 {
- margin: 0 3em 0 0;
+h1 {
+ margin: 0;
 }
 
 .overflow-auto {
@@ -36,11 +33,20 @@ header h1 {
   }
 }
 
+#note1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+#note1 > #note1_1,
+#note1 > #note1_2 {
+  margin-right: 2em;
+}
+
 table.metal_legend,
 table.metal_legend2 {
   border-spacing: 3px;
   box-sizing: border-box;
-  margin: .2em 3em .1em 0;
+  margin: .2em auto;
 }
 table.metal_legend td,
 table.metal_legend2 td {
@@ -213,36 +219,7 @@ modules.addClickListener();
 
 <body>
 
-  <header>
-    <h1>元素周期表</h1>
-
-    <div class="overflow-auto">
-      <table class="metal_legend">
-      	<tbody>
-      	<tr>
-      	  <td class="not_metal">非金属</td>
-      	  <td class="metal">金属</td>
-      	  <td class="not_clue_metal">不明</td>
-      	</tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div class="overflow-auto">
-      <table class="metal_legend2">
-      	<tbody>
-      	<tr>
-      	  <td class="alkali_metal">アルカリ金属</td>
-      	  <td class="alkali_earth">アルカリ土類金属</td>
-      	  <td class="halogen">ハロゲン</td>
-      	  <td class="noble_gas">希ガス</td>
-      	</tr>
-      	</tbody>
-      </table>
-    </div>
-
-  </header>
-
+<h1>元素周期表</h1>
 
 <div class="overflow-auto">
 <table id="periodic_table_main" class="periodic_table">
@@ -454,6 +431,33 @@ modules.addClickListener();
 	  </tr>
   </tbody>
 </table>
+</div>
+
+<div id="note1">
+  <div id="note1_1" class="overflow-auto">
+    <table class="metal_legend">
+      <tbody>
+      <tr>
+        <td class="not_metal">非金属</td>
+        <td class="metal">金属</td>
+        <td class="not_clue_metal">不明</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="note1_2" class="overflow-auto">
+    <table class="metal_legend2">
+      <tbody>
+      <tr>
+        <td class="alkali_metal">アルカリ金属</td>
+        <td class="alkali_earth">アルカリ土類金属</td>
+        <td class="halogen">ハロゲン</td>
+        <td class="noble_gas">希ガス</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 </body>
