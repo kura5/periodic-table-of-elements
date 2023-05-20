@@ -1,4 +1,4 @@
-const addClickListener = () => {
+function addClickListener() {
   // 各要素にアクセスする
   ['periodic_table_main', 'periodic_table_sub'].forEach((cssClass) => {
     document.querySelectorAll(`#${cssClass} > tbody > tr > td:not(:first-child)`).forEach((td) => {
@@ -9,7 +9,8 @@ const addClickListener = () => {
 
       // 元素名を取得する
       let atomName = '';
-      if (elmAtomName === null) return;
+      if (elmAtomName === null)
+        return;
       atomName = elmAtomName?.textContent;
 
       // URL
@@ -18,11 +19,11 @@ const addClickListener = () => {
       // 「原子番号」「元素記号」「元素名」「原子量」に click イベントリスナーを追加する。
       [elmAtomNum, elmAtomSymbol, elmAtomName, elmAtomWt].forEach((e) => {
         e.style.cursor = 'pointer';
-        e.addEventListener('click', ()=>{window.open(url, '_blank').focus()});
+        e.addEventListener('click', () => { window.open(url, '_blank').focus(); });
       });
     });
   });
-};
+}
 
 export default {
   addClickListener
