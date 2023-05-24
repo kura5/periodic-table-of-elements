@@ -7,209 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>元素周期表</title>
 <style>
-:root {
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
-  --color-orange: orange;
-  --color-metal: #e0ffff;
-  --color-not-metal: #fafad2;
-  --color-not-clue-metal: #eee;
-  --color-alkali-metal: #e0e4ff;
-  --color-alkali-earth: #e0f1ff;
-  --color-halogen: #ffe0e0;
-  --color-noble-gas: #ffe0f2;
-}
-
-h1 {
- margin: 0;
-}
-
-.overflow-auto {
-  overflow: auto;
-}
-@media print {
-  .overflow-auto {
-    overflow: visible;
-  }
-}
-
-#note1 {
-  display: flex;
-  flex-wrap: wrap;
-}
-#note1 > #note1_1,
-#note1 > #note1_2 {
-  margin-right: 2em;
-}
-
-table.metal_legend,
-table.metal_legend2 {
-  border-spacing: 3px;
-  box-sizing: border-box;
-  margin: .2em auto;
-}
-table.metal_legend td,
-table.metal_legend2 td {
-  padding: 3px 5px;
-  border: 1px solid black;
-}
-
-table.periodic_table,
-table.periodic_table2 {
-  border-width: 1px;
-  border-spacing: 3px;
-  border: 0px solid white;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-
-table.periodic_table > thead > tr > td:not(:first-child) {
-  background-color: #eee;
-  color: black;
-}
-
-table.periodic_table > thead > tr > td,
-table.periodic_table2 > thead > tr > td {
-  text-align: center;
-}
-
-table.periodic_table > tbody > tr > td:first-child {
-  background-color: #eee;
-  border-color: #eee;
-  color: black;
-  min-width: 60px;
-  text-align: center;
-  vertical-align: middle;
-}
-table.periodic_table > tbody > tr > td.desc_in_table {
-  padding: .5em;
-  text-align: left;
-  border-width: 0;
-  vertical-align: middle;
-}
-
-table.periodic_table > tbody > tr > td.border1 {
-  border: 1px solid #ccc;
-  vertical-align: middle;
-}
-
-table.periodic_table2 > tbody > tr > td:first-child {
-  font-weight: bold;
-  min-width: 60px;
-  vertical-align: middle;
-  border: 1px solid #ccc;
-}
-table.periodic_table2 > tbody > tr > td:not(:first-child) {
-  background-color: var(--color-metal);
-  border-color: var(--color-metal);
-}
-
-table.periodic_table > tbody > tr > td,
-table.periodic_table2 > tbody > tr > td {
-  text-align: center;
-  border: 3px solid white;
-  padding: 0;
-  vertical-align: top;
-  min-width: 55px;
-  max-width: 59px;
-  box-sizing: border-box;
-}
-
-table.periodic_table > tbody > tr > td.not_metal.semicon {
-  border: 3px solid var(--color-orange);
-}
-table.periodic_table > tbody > tr > td.not_metal,
-table.metal_legend > tbody > tr > td.not_metal {
-  background-color: var(--color-not-metal);
-  border-color: var(--color-not-metal);
-}
-table.periodic_table > tbody > tr > td.metal,
-table.metal_legend > tbody > tr > td.metal {
-  background-color: var(--color-metal);
-  border-color: var(--color-metal);
-}
-table.periodic_table > tbody > tr > td.metal.semicon {
-  border-color: var(--color-metal);
-  border: 3px solid orange;
-}
-table.periodic_table > tbody > tr > td.not_clue_metal,
-table.metal_legend > tbody > tr > td.not_clue_metal {
-  background-color: var(--color-not-clue-metal);
-  border-color: var(--color-not-clue-metal);
-}
-
-table.periodic_table > tbody > tr > td.alkali_metal,
-table.metal_legend2 > tbody > tr > td.alkali_metal {
-  background-color: var(--color-alkali-metal);
-  border-color: var(--color-alkali-metal);
-}
-table.periodic_table > tbody > tr > td.alkali_earth,
-table.metal_legend2 > tbody > tr > td.alkali_earth {
-  background-color: var(--color-alkali-earth);
-  border-color: var(--color-alkali-earth);
-}
-table.periodic_table > tbody > tr > td.halogen,
-table.metal_legend2 > tbody > tr > td.halogen {
-  background-color: var(--color-halogen);
-  border-color: var(--color-halogen);
-}
-table.periodic_table > tbody > tr > td.noble_gas,
-table.metal_legend2 > tbody > tr > td.noble_gas {
-  background-color: var(--color-noble-gas);
-  border-color: var(--color-noble-gas);
-}
-
-table.periodic_table > tbody > tr > td > span:first-child,
-table.periodic_table2 > tbody > tr > td > span:first-child {
-  font-size: x-small;
-  margin-right: 1px;
-}
-table.periodic_table > tbody > tr > td > span:nth-child(2),
-table.periodic_table2 > tbody > tr > td > span:nth-child(2) {
-  font-size: large;
-  font-weight: bold;
-  color: #808080;
-}
-table.periodic_table > tbody > tr > td > span:nth-child(2).emp,
-table.periodic_table2 > tbody > tr > td > span:nth-child(2).emp {
-  color: black;
-}
-table.periodic_table > tbody > tr > td > span:nth-child(3),
-table.periodic_table2 > tbody > tr > td > span:nth-child(3) {
-  font-size: x-small;
-  color: black;
-  display: block;
-}
-table.periodic_table > tbody > tr > td > span:nth-child(3).kitai {
-  color: var(--color-red);
-}
-table.periodic_table > tbody > tr > td > span:nth-child(3).ekitai {
-  color: var(--color-blue);
-}
-table.periodic_table > tbody > tr > td > span:nth-child(4),
-table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
-  font-size: x-small;
-  display: block;
-}
-
-.desc1 {
-  margin-top: 1em;
-}
-.desc1 ul {
-  margin: 0 auto;
-  padding-left: 15px;
-}
-.desc1 ul li {
-  font-size: small;
-}
-
-.semicon-sample {
-  display: inline-block;
-  height: auto;
-  width: 1.5em;
-  margin-right: .2em;
-  border: 2px solid var(--color-orange);
-}
+<?php
+echo file_get_contents('./css/normalize.min.css');
+echo file_get_contents('./css/main.css');
+?>
 </style>
 <script type="module">
 import modules from "./js/main.js";
@@ -219,7 +20,12 @@ modules.addClickListener();
 
 <body>
 
-<h1>元素周期表</h1>
+<header>
+	<h1>元素周期表</h1>
+	<div class="header-note">
+		* 元素記号・元素名のあたりをクリックすると Wikipedia の該当ページが開きます。
+	</div>
+</header>
 
 <div class="overflow-auto">
 <table id="periodic_table_main" class="periodic_table">
