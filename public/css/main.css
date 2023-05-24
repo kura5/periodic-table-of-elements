@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
- margin: 0;
+ margin: 0 auto .2em;
 }
 
 .overflow-auto {
@@ -32,8 +32,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
 }
-#note1 > #note1_1,
-#note1 > #note1_2 {
+#note1 > #note1_1 {
   margin-right: 2em;
 }
 
