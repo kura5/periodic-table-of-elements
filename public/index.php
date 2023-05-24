@@ -20,12 +20,7 @@ modules.addClickListener();
 
 <body>
 
-<header>
-	<h1>元素周期表</h1>
-	<div class="header-note">
-		* 元素記号・元素名のあたりをクリックすると Wikipedia の該当ページが開きます。
-	</div>
-</header>
+<h1>元素周期表</h1>
 
 <div class="overflow-auto">
 <table id="periodic_table_main" class="periodic_table">
@@ -262,6 +257,10 @@ modules.addClickListener();
       </tbody>
     </table>
   </div>
+</div>
+
+<div class="footer-note">
+	* 元素記号・元素名のあたりをクリックすると Wikipedia の該当ページが開きます。
 </div>
 
 </body>

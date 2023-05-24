@@ -15,25 +15,6 @@ body {
   margin: 1em;
 }
 
-header {
-  display: flex;
-  align-items: end;
-  margin-block-end: 1em; 
-}
-header > h1 {
-  height: 1em;
-  vertical-align: bottom;
-}
-header > .header-note {
-  margin-inline-start: 1em;
-  font-size: small;
-}
-@media print {
-  header > .header-note {
-    display: none;
-  }
-}
-
 h1 {
  margin: 0;
 }
@@ -223,4 +204,14 @@ table.periodic_table2 > tbody > tr > td > span:nth-child(4) {
   width: 1.5em;
   margin-right: .2em;
   border: 2px solid var(--color-orange);
+}
+
+.footer-note {
+  font-size: small;
+  margin-block-start: 1em;
+}
+@media print {
+  .footer-note {
+    display: none;
+  }
 }
