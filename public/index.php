@@ -194,9 +194,7 @@ modules.addClickListener();
 	</tr>
   </tbody>
 </table>
-</div>
 
-<div class="overflow-auto">
 <table id="periodic_table_sub" class="periodic_table2">
 	<tbody>
     <tr>
